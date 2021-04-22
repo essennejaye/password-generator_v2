@@ -58,7 +58,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: var(--clr-grey-10);
 }
 
 .wrapper {
@@ -84,6 +84,7 @@ header {
   padding-top: 0px;
   color: hsl(206, 17%, 28%);
 }
+/* Password form */
 .password-form h3 {
   color: var(--clr-primary-1);
   margin-bottom: 1.5rem;
@@ -101,28 +102,22 @@ header {
   justify-content: center;
 }
 #password-length {
-  width: 47%;
+  width: 49%;
   border-radius: 3px;
   margin: 0px 5px;
-  background-color: #2196f3;
-}
-#password-length:hover {
-  background-color: #f9fbfd;
+  background-color: var(--clr-primary-5);
 }
 ::placeholder {
-  color: hsl(0, 0%, 100%);
+  color:var(--clr-white);
   text-transform: capitalize;
 }
-:hover::placeholder {
-    color: hsl(205, 63%, 48%);
-}
 input[type="number"] {
-  color: var(--clr-grey-1);
+  color: var(--clr-white);
 }
 textarea::placeholder {
-    color: lightslategrey;
+  color: var(--clr-grey-7);
 }
-
+/* Checkboxes */
 /* Customize the label (the container) */
 .container {
   display: block;
@@ -164,7 +159,7 @@ textarea::placeholder {
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #2196f3;
+  background-color: var(--clr-primary-5);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -185,7 +180,7 @@ textarea::placeholder {
   top: 5px;
   width: 5px;
   height: 10px;
-  border: solid white;
+  border: solid var(--clr-white);
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -193,7 +188,7 @@ textarea::placeholder {
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--clr-white);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -211,7 +206,7 @@ textarea::placeholder {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: var(--clr-grey-9);
   height: 2px;
 }
 
@@ -230,18 +225,18 @@ textarea::placeholder {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: var(--clr-grey-9);
   height: 2px;
 }
 
 .btn {
   text-transform: uppercase;
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: var(--clr-red-dark);
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
-  color: hsl(0, 0%, 100%);
+  color: var(--clr-white);
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
@@ -250,20 +245,23 @@ textarea::placeholder {
   text-align: center;
   cursor: pointer;
 }
-.btn:hover {
-    background-color: var(--clr-red-light);
+.clear-btn:hover {
+  background-color: var(--clr-red-light);
 }
 
 .submit-btn {
   background-color: var(--clr-green-dark);
 }
 .submit-btn:hover {
-    background-color: var(--clr-green-light);
+  background-color: var(--clr-green-light);
 }
 
 .disabled {
   cursor: not-allowed;
-  background: #c0c7cf;
+  background: var(--clr-grey-9);
+}
+.disabled:hover {
+  background: var(--clr-grey-9);
 }
 
 #password {
@@ -281,7 +279,7 @@ textarea::placeholder {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
+  border: 2px dashed var(--clr-grey-9);
   border-radius: 6px;
   resize: none;
   overflow: hidden;
@@ -294,12 +292,24 @@ textarea::placeholder {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(101, 186, 247, 0.6);
+  background-color: hsl(205, 90%, 68%, 0.6);
   display: grid;
   place-items: center;
   transition: var(--transition);
   visibility: hidden;
   z-index: -10;
+}
+.modal-overlay::before {
+  content: "";
+  background-image: url("img.svg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.1;
+
 }
 /* OPEN/CLOSE MODAL */
 .open-modal {
@@ -316,7 +326,7 @@ textarea::placeholder {
   display: grid;
   place-items: center;
   position: relative;
-  color: #2196f3;
+  color: var(--clr-primary-5);
 }
 .close-btn {
   position: absolute;
