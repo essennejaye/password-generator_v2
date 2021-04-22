@@ -20,7 +20,6 @@ clearBtn.addEventListener('click', () => {
 });
 
 const getPasswordLength = () => {
-    // const passwordLength = document.getElementById('password-length').value;
     if (isNaN(passwordLength.value) ||
         !passwordLength.value ||
         passwordLength.value < 8 ||
