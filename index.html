@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrapper">
+      <header>
+        <h1>password generator</h1>
+      </header>
+
+      <div class="card password-form">
+        <h3 class="card-header">generate a password</h3>
+
+        <div class="form-control">
+          <div class="num-charac">
+            <label for="password-length">password length</label>
+            <input
+              type="number"
+              id="password-length"
+              name="password-length"
+              placeholder="enter a number between 8 - 128"
+            />
+          </div>
+          <label class="container"
+            >uppercase letters
+            <input type="checkbox" checked="checked" value="uppercase" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container"
+            >lowercase letters
+            <input type="checkbox" checked="checked" value="lowercase" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container"
+            >numbers
+            <input type="checkbox" checked="checked" value="numbers" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container"
+            >special characters
+            <input type="checkbox" checked="checked" value="specials" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn submit-btn">
+            generate password
+          </button>
+        </div>
+      </div>
+
+      <section class="card">
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="your secure password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="clearBtn" class="btn clear-btn disabled">
+            clear password
+          </button>
+        </div>
+      </section>
+    </main>
+    <!-- modal -->
+    <div class="modal-overlay">
+      <div class="modal-container">
+        <h3>modal content</h3>
+        <button class="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
