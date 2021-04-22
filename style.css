@@ -301,7 +301,7 @@ textarea::placeholder {
 }
 .modal-overlay::before {
   content: "";
-  background-image: url("img.svg");
+  background-image: url("./images/img.svg");
   background-size: cover;
   position: absolute;
   top: 0px;
