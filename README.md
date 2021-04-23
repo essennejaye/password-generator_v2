@@ -13,6 +13,7 @@ https://essennejaye.github.io/password-generator_v2/
 ![](images/password_v2_ss2.png)
 ![](images/password_v2_ss.png)
 ![](images/password_v2_ss3.png)
+![](images/password_v2_ss5.png)
 
 ```` HTML
       <div class="card password-form">

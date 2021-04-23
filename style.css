@@ -80,11 +80,12 @@ h4 {
 
 header {
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   padding-top: 0px;
   color: hsl(206, 17%, 28%);
 }
 /* Password form */
+
 .password-form h3 {
   color: var(--clr-primary-1);
   margin-bottom: 1.5rem;
@@ -108,7 +109,7 @@ header {
   background-color: var(--clr-primary-5);
 }
 ::placeholder {
-  color:var(--clr-white);
+  color: var(--clr-white);
   text-transform: capitalize;
 }
 input[type="number"] {
@@ -186,6 +187,7 @@ textarea::placeholder {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+/* password result container */
 
 .card {
   background-color: var(--clr-white);
@@ -198,8 +200,9 @@ textarea::placeholder {
   max-width: 800px;
   padding: 30px 40px;
 }
+/* password form container */
 .password-form {
-  margin: 30px auto;
+  margin: 20px auto;
 }
 
 .card-header::after {
@@ -215,6 +218,27 @@ textarea::placeholder {
 }
 textarea::placeholder {
   text-transform: capitalize;
+}
+
+#password {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 85px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed var(--clr-grey-9);
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden;
 }
 
 .card-footer {
@@ -264,26 +288,6 @@ textarea::placeholder {
   background: var(--clr-grey-9);
 }
 
-#password {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  display: block;
-  width: 100%;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 85px;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 2px dashed var(--clr-grey-9);
-  border-radius: 6px;
-  resize: none;
-  overflow: hidden;
-}
 
 /* Modal */
 .modal-overlay {
@@ -309,7 +313,6 @@ textarea::placeholder {
   bottom: 0px;
   left: 0px;
   opacity: 0.1;
-
 }
 /* OPEN/CLOSE MODAL */
 .open-modal {
@@ -344,12 +347,22 @@ textarea::placeholder {
   transform: scale(1.3);
 }
 
-@media (max-width: 690px) {
+@media (max-width: 790px) {
+  .num-charac {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+
   .btn {
     font-size: 1rem;
     margin: 16px 0px 0px 0px;
     padding: 10px 15px;
   }
+  #password-length {
+    width: 75%;
+  }
+
 
   #password {
     font-size: 1rem;
@@ -357,7 +370,30 @@ textarea::placeholder {
 }
 
 @media (max-width: 500px) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: normal;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
   .btn {
     font-size: 0.8rem;
+  }
+  .password-form {
+    margin: 15px auto;
+    padding: 15px 30px;
+  }
+  #password-length {
+    width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+  .num-charac {
+    width: 115%;
+    padding: 0px;
   }
 }
