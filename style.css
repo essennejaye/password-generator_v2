@@ -323,7 +323,7 @@ textarea::placeholder {
   background: var(--clr-grey-10);
   border-radius: var(--radius);
   width: 90vw;
-  height: 30vh;
+  height: 40vh;
   max-width: var(--fixed-width);
   text-align: center;
   display: grid;
